@@ -1,14 +1,12 @@
 import axios from 'axios';
 
-const url = 'http://localhost:3000/api';
+const url = 'https://api-eliteprospects.herokuapp.com/api';
 
 export default {
   async getStats(year) {
-    console.log(year);
     try {
       const res = await axios.get(`${url}/stats/${year}`);
-      console.log(res);
-      return res;
+      return res.data;
     } catch (err) {
       return err;
     }

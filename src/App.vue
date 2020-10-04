@@ -68,7 +68,6 @@ export default {
   async created() {
     try {
       this.teams = await service.getTeams();
-      console.log(this.teams);
     } catch (err) {
       console.log(err);
     }
